@@ -33,7 +33,7 @@
 
     &_main {
         &::after {
-            background: url("/img/landing-main.jpg") no-repeat center center / cover;
+            background: url("img/landing-main.jpg") no-repeat center center / cover;
 
             @media (max-width: $brp-mobile) {
                 background-position: 65% center;
@@ -43,19 +43,19 @@
 
     &_dentinale-natura {
         &::after {
-            background: url("/img/landing-dentinale.jpg") no-repeat center center / cover;
+            background: url("img/landing-dentinale.jpg") no-repeat center center / cover;
         }
     }
 
     &_windi {
         &::after {
-            background: url("/img/landing-windi.jpg") no-repeat center center / cover;
+            background: url("img/landing-windi.jpg") no-repeat center center / cover;
         }
     }
 
     &_nosefrida {
         &::after {
-            background: url("/img/landing-nosefrida.jpg") no-repeat center center / cover;
+            background: url("img/landing-nosefrida.jpg") no-repeat center center / cover;
         }
     }
 
