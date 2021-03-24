@@ -1,17 +1,14 @@
 .menu-link {
-    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: $dark-blue;
     transition: color 0.3s ease;
-    // &:visited {
-
-    // }
     &:hover {
         color: blue;
     }
 
     &_underline {
+        font-weight: 500;
         &::after {
             display: block;
             content: "";

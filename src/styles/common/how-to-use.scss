@@ -4,21 +4,29 @@
             flex: 0 1 33.3%;
         }
     }
-    padding: 100px 0;
+    padding: 100px 30px;
 
     &__container {
     }
 
     &__header {
+        margin: 0 auto;
         text-align: center;
+        max-width: 750px;
     }
 
     &__heading {
-        font-size: 60px;
+        margin-bottom: 20px;
+        @media(max-width: 768px) {
+            font-size: 32px;
+        }
+        @media(max-width: 500px) {
+            font-size: 28px;
+        }
     }
 
     &__description {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     &__body {
@@ -28,7 +36,19 @@
     }
 
     &__item {
+        padding: 0 40px 0 0;
+        &:last-child {
+            padding: 0
+        }
         flex: 0 1 25%;
+        @media(max-width: 900px) {
+            padding: 0;
+            flex: 0 1 50%;
+        }
+        @media(max-width: 450px) {
+            padding: 0;
+            flex: 0 1 100%;
+        }
         text-align: center; 
         &:last-child {
             margin: 0;
@@ -45,13 +65,26 @@
     }
 
     &__instruction {
+        font-size: 14px;
+        color: $dark-blue;
+        @media(max-width: 900px) {
+            padding: 0 20px 40px 20px;
+        }
 
     }
 
     &__button {
+        font-size: 14px;
         margin: 0 auto;
         margin-top: 100px;
         display: block;
+        border: 2px solid $dark-blue;
+        border-radius: 20px;
+        padding: 10px 40px;
+        background-color: white;
+        @media(max-width: 900px) {
+            margin: 0 auto 0 auto;
+        }
     }
 }
 .container {

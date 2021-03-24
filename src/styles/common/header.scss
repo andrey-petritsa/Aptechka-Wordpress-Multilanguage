@@ -2,14 +2,14 @@
 
 @import "../animations/header-fade";
 
+
 .header {
 
     @media (max-width: 765px) {
         padding: 10px 5px;
     }
 
-    @media (max-width: 390px) {
-               
+    @media (max-width: 390px) {          
     }
 
 
@@ -67,7 +67,8 @@
     }
 
     &__link {
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 500;
     }
 
     li {

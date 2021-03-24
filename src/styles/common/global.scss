@@ -1,3 +1,7 @@
+@import "utils/variables";
+
+@import "utils/fonts";
+
 @import "../../local_modules/normalize.css/normalize";
 
 @import "../../node_modules/swiper/swiper-bundle.css";
@@ -18,9 +22,8 @@ html {
 
 body {
     margin: 0;
-    font-family: "Montserrat";
-    font-style: normal;
     font-weight: 400;
+    font-family: 'Montserrat';
 }
 
 img {
