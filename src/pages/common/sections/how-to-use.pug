@@ -1,0 +1,20 @@
+mixin how-to-use-item()
+    .how-to-use__item
+        .how-to-use__icon 
+            img(src="img/vidavit_2.svg", alt="#")
+        .how-to-use__instruction
+            | Lorem ipsum, dolor sit amet consectetur adipisicing.
+
+
+section.how-to-use  
+    .container.how-to-use__container 
+        .how-to-use__header
+            .how-to-use__heading Как использовать? 
+            .how-to-use__description Процедура не требует от мам специального опыта использования газоотводной трубочки
+        .how-to-use__body 
+            block how-to-use-item
+                +how-to-use-item()
+        block how-to-use-button
+            
+
+

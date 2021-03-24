@@ -8,6 +8,11 @@
         padding: 10px 5px;
     }
 
+    @media (max-width: 390px) {
+               
+    }
+
+
     position:absolute;
     align-items: center;
     display: flex;
@@ -25,6 +30,7 @@
         padding: 10px 20px;
         background-color: rgba(247, 247, 247, 0.9);
         animation: header-fade 0.5s ease;
+
 
     }
     &__logo {

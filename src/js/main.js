@@ -12,10 +12,11 @@ import init_sticky_header from './sticky_header'
 
 
 $(document).ready(() => {
+    init_sticky_header()
     init_swiper('.swiper-container')
     init_datepicker(`#form-subscribe__client-date`)
     init_burger('.burger', `.header__menu`)
     init_language_menu(`.menu__action`)
     init_aos()
-    init_sticky_header()
+    
 })

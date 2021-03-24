@@ -1,0 +1,58 @@
+.how-to-use {
+    &_column_3 {
+        .how-to-use__item {
+            flex: 0 1 33.3%;
+        }
+    }
+    padding: 100px 0;
+
+    &__container {
+    }
+
+    &__header {
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 60px;
+    }
+
+    &__description {
+        font-size: 18px;
+    }
+
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+
+    &__item {
+        flex: 0 1 25%;
+        text-align: center; 
+        &:last-child {
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        margin-bottom: 20px;
+        img {
+            width: 136px;
+            height: 136px;
+            object-fit: cover;
+        }
+    }
+
+    &__instruction {
+
+    }
+
+    &__button {
+        margin: 0 auto;
+        margin-top: 100px;
+        display: block;
+    }
+}
+.container {
+}

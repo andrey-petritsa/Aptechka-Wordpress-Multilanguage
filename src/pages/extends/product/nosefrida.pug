@@ -1,0 +1,17 @@
+extends ../../common/sections/product
+
+block product-section
+    - var product_link = "nosefrida.html"
+    - var product_image = "img/dentinale_product.png"
+    +product-section("product_pink")
+
+block product-image
+    +product-image(product_link, product_image) 
+block product-heading
+    | ПРИ ЗАЛОЖЕННОСТИ НОСА
+block product-name
+    | NoseFrida ®
+block product-description
+    | Назальный аспиратор для свободного дыхания малыша с первых дней жизни.
+block product-submit
+    +product-submit(product_link) 
