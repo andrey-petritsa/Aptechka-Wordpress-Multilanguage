@@ -1,0 +1,106 @@
+.symptoms {
+    margin-top: 100px;
+    color: $dark-blue;
+    @media(max-width: 1134px) {
+        flex-direction: column;
+    }
+    &_rows_4 {
+        .symptoms__body {
+            max-height: 420px;
+            @media(max-width: 585px) {
+                max-height: none;
+            }
+        } 
+
+        .symptoms__column{
+            &:nth-child(2) {
+                @media(max-width: 1465px) {
+                    padding: 0;
+                    margin: 0 0 0 20px;
+
+                    .symptom {
+                        margin: 0 20px 25px 0;
+                        @media(max-width: 585px) {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            @media(max-width: 1134px) {
+                &:nth-child(2) {
+                    margin: 0 20px;
+                }
+            }  
+
+            @media(max-width: 585px) {
+                margin: 0;
+                padding: 0;
+                justify-content: center;
+            }
+
+            &:nth-child(2) {
+                @media(max-width: 585px) {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        
+    }
+
+    &_rows_3 {
+        .symptoms__body {
+            max-height: 373px;
+            .symptom {
+                margin: 0 50px 25px 0;
+            }
+        }  
+    }
+
+    &__column {
+        &:nth-child(2) {
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 100px;
+
+            @media(max-width: 1134px)
+            {
+                .symptoms__body {
+                    display: flex;
+                }
+            }
+            
+        }
+    }
+
+    &__header {
+        font-size: 48px;
+        font-weight: 700;
+        margin: 0 0 25px 0;
+    }
+
+    &__body {
+        display: inline-flex;
+        flex-direction: column;
+        flex-wrap: wrap;    
+    }
+
+    &__symptom {
+        
+    }
+
+    &__image {
+    }
+}
+
+.symptom {
+    display: flex;
+    align-items: center;
+    &__text {
+        font-size: 14px;
+        font-weight: 700;
+        max-width: 165px;
+        margin: 0 0 0 25px;
+    }
+    margin: 0 100px 25px 0;
+}
