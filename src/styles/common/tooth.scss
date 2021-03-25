@@ -1,0 +1,125 @@
+.tooth {
+    padding: 0 20px;
+    &__container {
+    }
+
+    &__header {
+    }
+
+    &__heading {
+        @media(max-width: 650px) {
+            font-size: 32px;
+        }
+    }
+
+    &__description {
+    }
+
+    &__body {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        @media(max-width: 750px) {
+            flex-wrap: wrap;
+        }
+        
+    }
+
+    &__column {
+    }
+
+    
+    &__image-column {
+        display: none;
+        &_active {
+            display: block;
+        }
+        position: relative;
+        img {
+            width: 380px;
+            height: 570px;
+            object-fit: cover;
+            display: block;
+            @media(max-width: 420px){
+                width: 250px;
+                height: auto;
+            }
+        }
+        @media(max-width: 750px) {
+            flex: 0 1 100%;
+            img {
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__image-column-content {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__select-column {
+        margin: 0 0 0 85px;
+        @media(max-width: 800px) {
+            margin: 0 0 0 15px;
+        }
+        @media(max-width: 750px) {
+            margin: 0 0 0 0px;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &__select {
+        display: flex;
+        flex-direction: column;
+        padding: 0 40px 0 20px ;
+        border-radius: 5px;
+        justify-content: center;    
+        color: $dark-blue; 
+        min-height: 20%;
+        @media(max-width: 750px) {
+            padding: 20px 20px 20px 20px;
+        }
+        transition: background-color 0.3s;
+        &_active {
+            background-color: $dentinale-color;
+        }
+    }
+
+    &__select-time {
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__select-tooth {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__text {
+        color: $dark-blue;
+        font-weight: bold;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        span {
+            &:first-child {
+                font-size: 50px;
+            }
+            &:last-child {
+                font-size: 18px;
+            }
+        }
+    }
+}
+

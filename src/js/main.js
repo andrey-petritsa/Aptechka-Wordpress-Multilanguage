@@ -5,6 +5,7 @@ import init_burger from './burger'
 import init_language_menu from './language-menu'
 import init_aos from './aos'
 import init_sticky_header from './sticky_header'
+import init_tooth from "./tooth"
 
 
 
@@ -18,5 +19,6 @@ $(document).ready(() => {
     init_burger('.burger', `.header__menu`)
     init_language_menu(`.menu__action`)
     init_aos()
+    init_tooth()
     
 })
