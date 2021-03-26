@@ -1,4 +1,5 @@
 .about-product {
+    
     &_green {
         ul {
             background-color: $dentinale-color;
@@ -62,10 +63,7 @@
 
     &__header {
         text-align: center;
-        margin-top: 70px;
-        @media(max-width: 650px) {
-            font-size: 38px;
-        }
+        margin-top: 40px;
     }
 
     &__body {
