@@ -1,0 +1,22 @@
+mixin products-group__product(link, img_src, product_name, product_text)
+    .products-group__product
+        .products-group__product-image
+            a(href=link) 
+                img(src=img_src, alt="#")
+        .products-group__content 
+            .products-group__name=product_name  
+            .products-group__text=product_text
+                
+
+section.products-group 
+    .container.products-group__container 
+        .products-group__header
+            .products-group__heading.heading Продукты аптечки малыша
+            .products-group__description Must have для супер–мам
+        .products-group__body
+            block products-group__body
+                +products-group__product("#", "#", "Название продукта 1", "Описание продукта 1")
+                +products-group__product("#", "#", "Название продукта 1", "Описание продукта 1")
+            
+                
+        
