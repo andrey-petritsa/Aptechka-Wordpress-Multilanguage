@@ -1,5 +1,8 @@
 .heading {
     font-size: 48px;
+    @media(max-width: 750px) {
+        font-size: 30px;
+    }
     font-weight: 700;
     color: $dark-blue;
     text-align: center;
