@@ -1,0 +1,41 @@
+.popup {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(86, 98, 137, 0.527);
+    width: 100%;
+    height: 100%;
+
+    &__action-close {
+        margin: 0 0 5px 0;
+        position: relative;
+        margin-left: auto;
+        transition: all 0.3s ease 0s;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+        }
+        width: 50px;
+        height: 50px;
+        &::before, &::after {
+            display: block;
+            content: "";
+            position: absolute;
+            background-color: white;
+            // top: 0;
+            left: 0;
+            width: 100%;
+            height: 10%;
+        }
+        &::after {
+            top: 50%;
+            transform: rotate(45deg)
+        }
+    
+        &::before {
+            top: 50%;
+            transform: rotate(-45deg)
+        }
+    }
+}

@@ -18,6 +18,8 @@
 
 @import "bem/fullscreen-card";
 
+@import "bem/popup.scss";
+
 @import "common/header";
 
 @import "common/footer";
@@ -40,4 +42,6 @@
 
 @import "common/about-brand";
 
-@import "common/products-group.scss"
+@import "common/products-group";
+
+@import "common/instruction-popup";

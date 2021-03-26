@@ -6,6 +6,7 @@ import init_language_menu from './language-menu'
 import init_aos from './aos'
 import init_sticky_header from './sticky_header'
 import init_tooth from "./tooth"
+import init_popup_how_to_use from "./popup_how_to_use"
 
 
 
@@ -20,5 +21,5 @@ $(document).ready(() => {
     init_language_menu(`.menu__action`)
     init_aos()
     init_tooth()
-    
+    init_popup_how_to_use()
 })
