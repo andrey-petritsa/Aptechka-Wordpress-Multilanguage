@@ -18,7 +18,11 @@
 
 @import "bem/fullscreen-card";
 
-@import "bem/popup.scss";
+@import "bem/popup";
+
+@import "bem/chatbot";
+
+@import "bem/link-card";
 
 @import "common/header";
 
@@ -47,3 +51,5 @@
 @import "common/instruction-popup";
 
 @import "common/product-filter";
+
+@import "common/mama";
