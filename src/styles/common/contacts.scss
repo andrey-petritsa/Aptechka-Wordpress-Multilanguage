@@ -17,13 +17,16 @@
 	&__map {
 		.contacts-info {
 			max-width: 480px;
-
 			&__social-icons {
 				img {
 					width: 40px;
 					height: 40px;
 				}
 			}
+		}
+		@media(max-width: 1200px) {
+			flex-direction: column;
+			justify-content: center;
 		}
 	}
 

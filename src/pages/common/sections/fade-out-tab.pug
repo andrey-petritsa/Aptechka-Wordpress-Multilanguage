@@ -1,0 +1,48 @@
+mixin fade-out-tab-logo
+    .fade-out-tab-logo
+        a(href="#")
+            img(src="img/1-detnir.jpg", alt="")
+
+mixin fade-out-tab-menu__link(href, name, active="", data="")
+    li.fade-out-tab-menu__link(class=active, data-product=data)
+        a(href=href).menu-link=name
+
+mixin fade-out-tab__logos(heading="Спрашивайте Dentinale® natura в аптеках и детских магазинах")
+    .fade-out-tab__logos
+        .fade-out-tab__heading.fade-out-tab__heading_small=heading
+        .fade-out-tab__logos-wrapper.fade-out-tab__logos-wrapper(data-product=data)
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+            +fade-out-tab-logo
+
+
+mixin fade-out-tab__item(data="dentinale_natura", heading="", active="fade-out-tab__item_active")
+    .fade-out-tab__item(data-product=data, class=active)
+        +fade-out-tab__logos(`Спрашивайте ${heading} в аптеках и детских магазинах`)
+        +fade-out-tab__logos(`Заказывайте ${heading} в интернет-магазинах`)
+
+
+section.fade-out-tab
+    .container
+        .fade-out-tab__header
+            .fade-out-tab__heading.heading Где купить?
+            nav
+                ul.fade-out-tab__menu.fade-out-tab-menu
+                    +fade-out-tab-menu__link("#", "Dentinale Natura", "fade-out-tab-menu__link_clicked", "dentinale_natura")
+                    +fade-out-tab-menu__link("#", "Windi", "", "windi")
+                    +fade-out-tab-menu__link("#", "NoseFrida", "", "nosefrida")
+        .fade-out-tab__body
+            +fade-out-tab__item("dentinale_natura", "Dentinale® natura")
+            +fade-out-tab__item("windi", "Windi", "")
+            +fade-out-tab__item("nosefrida", "NoseFrida", "")
+            .fade-out-tab__bottom-text и других магазинах страны.
+

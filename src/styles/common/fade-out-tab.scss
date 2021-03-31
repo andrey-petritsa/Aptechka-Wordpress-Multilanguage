@@ -1,4 +1,4 @@
-.where-can-buy {
+.fade-out-tab {
 	color: $dark-blue;
 	padding: 150px 20px 0 20px;
 
@@ -6,7 +6,7 @@
 	&__header {
 	}
 
-	&__product {
+	&__item {
 		transition: all 1s ease;
 		height: 0;
 		visibility: hidden;
@@ -64,7 +64,7 @@
 	}
 }
 
-.where-can-buy-menu {
+.fade-out-tab-menu {
 	display: flex;
 	padding: 0;
 	margin: 50px 0 0 0;
@@ -75,7 +75,7 @@
 	@media (max-width: 1200px) {
 		flex-direction: column;
 
-		.where-can-buy-menu__link {
+		.fade-out-tab-menu__link {
 			margin: 0 0 0 0;
 		}
 	}
@@ -110,10 +110,10 @@
 	}
 }
 
-.where-can-buy-ask {
+.fade-out-tab-ask {
 }
 
-.where-can-buy-logo {
+.fade-out-tab-logo {
 	text-align: center;
 	flex: 0 1 calc(100% / 6);
 
@@ -141,5 +141,5 @@
 	}
 }
 
-.where-can-buy-order {
+.fade-out-tab-order {
 }
