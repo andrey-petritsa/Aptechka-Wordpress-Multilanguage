@@ -32,7 +32,11 @@ module.exports = function script() {
       plugins: [
         new CircularDependencyPlugin(),
         new DuplicatePackageCheckerPlugin()
-      ]
+      ],
+      performance: {
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+      }
     }))
     .pipe(gulp.dest('build/js'))
 }

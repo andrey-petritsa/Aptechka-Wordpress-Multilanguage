@@ -1,18 +1,18 @@
 .breadcrumb {
-    color: $dark-blue;
-    font-size: 16px;
-    padding: 100px 20px 0px 20px;
-    &__links {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    
-    &__link {
-        &:not(:last-child):after {
-            content: '•';
-            padding: 0 10px;
-            color: $dark-blue;
-        }    
-    }
-        
+	color: $dark-blue;
+	font-size: 16px;
+	padding: 100px 20px 0 20px;
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		&:not(:last-child)::after {
+			content: "•";
+			padding: 0 10px;
+			color: $dark-blue;
+		}
+	}
 }

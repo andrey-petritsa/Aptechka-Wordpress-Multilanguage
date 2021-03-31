@@ -1,6 +1,6 @@
 import Swiper from 'swiper/bundle'
-export default function init_swiper(swiper_container) {
-    const swiper = new Swiper(swiper_container, {
+export default function initSwiper(swiperContainer) {
+    const swiper = new Swiper(swiperContainer, {
         autoHeight: true,
         effect: `fade`,
         loop: true,

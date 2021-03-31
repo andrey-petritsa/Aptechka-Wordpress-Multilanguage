@@ -1,42 +1,43 @@
 .instruction-popup {
-    overflow: auto;
-    transition: transform 0.8s ease;
-    padding: 20px;
-    transform: translateY(100%);
+	overflow: auto;
+	transition: transform 0.8s ease;
+	padding: 20px;
+	transform: translateY(100%);
 
-    &_active {
-        transform: translateY(0);
-    }
+	&_active {
+		transform: translateY(0);
+	}
 
-    &__container {
-        
-    }
+	&__container {
 
-    &__body {
-        background-color: white;
-        color: $dark-blue;
-        line-height: 21.7px;
-        padding: 50px;
-        @media(max-width: 765px) {
-            padding: 10px;
-        }
-    }
+	}
 
-    &__body-heading {
-        font-weight: 700;
-        font-size: 30px;
-    }
+	&__body {
+		background-color: white;
+		color: $dark-blue;
+		line-height: 21.7px;
+		padding: 50px;
 
-    &__content {
-        
-    }
+		@media (max-width: 765px) {
+			padding: 10px;
+		}
+	}
 
-    &__text {
-        font-size: 14px;
-        margin: 20px 0 0 0;
-    }
+	&__body-heading {
+		font-weight: 700;
+		font-size: 30px;
+	}
 
-    &__heading {
-        font-weight: 700;
-    }
+	&__content {
+
+	}
+
+	&__text {
+		font-size: 14px;
+		margin: 20px 0 0 0;
+	}
+
+	&__heading {
+		font-weight: 700;
+	}
 }

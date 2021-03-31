@@ -27,7 +27,7 @@ var A11y = {
     return $el;
   },
   addElRoleDescription: function addElRoleDescription($el, description) {
-    $el.attr('aria-role-description', description);
+    $el.attr('aria-roledescription', description);
     return $el;
   },
   addElControls: function addElControls($el, controls) {
@@ -174,7 +174,8 @@ var A11y = {
     swiper.a11y.addElRole($(swiper.slides), 'group');
     swiper.slides.each(function (slideEl) {
       var $slideEl = $(slideEl);
-      swiper.a11y.addElLabel($slideEl, $slideEl.index() + 1 + " / " + swiper.slides.length);
+      var ariaLabelMessage = params.slideLabelMessage.replace(/\{\{index\}\}/, $slideEl.index() + 1).replace(/\{\{slidesLength\}\}/, swiper.slides.length);
+      swiper.a11y.addElLabel($slideEl, ariaLabelMessage);
     }); // Navigation
 
     var $nextEl;
@@ -256,6 +257,7 @@ export default {
       firstSlideMessage: 'This is the first slide',
       lastSlideMessage: 'This is the last slide',
       paginationBulletMessage: 'Go to slide {{index}}',
+      slideLabelMessage: '{{index}} / {{slidesLength}}',
       containerMessage: null,
       containerRoleDescriptionMessage: null,
       itemRoleDescriptionMessage: null

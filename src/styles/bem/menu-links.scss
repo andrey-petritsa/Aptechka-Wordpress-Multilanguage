@@ -1,28 +1,30 @@
 .menu-link {
-    font-weight: 400;
-    font-size: 14px;
-    color: $dark-blue;
-    transition: color 0.3s ease;
-    &:hover {
-        color: blue;
-    }
+	font-weight: 400;
+	font-size: 14px;
+	color: $dark-blue;
+	transition: color 0.3s ease;
 
-    &_underline {
-        font-weight: 500;
-        &::after {
-            display: block;
-            content: "";
-            border-bottom: solid 3px $dark-blue;
-            transform: scaleX(0);
-            transition: transform 250ms ease-in-out;
-        }
+	&:hover {
+		color: blue;
+	}
 
-        &:hover::after {
-            transform: scaleX(1);
-        }
+	&_underline {
+		font-weight: 500;
 
-        &:hover {
-            color: $dark-blue;
-        }
-    }
+		&::after {
+			display: block;
+			content: "";
+			border-bottom: solid 3px $dark-blue;
+			transform: scaleX(0);
+			transition: transform 250ms ease-in-out;
+		}
+
+		&:hover::after {
+			transform: scaleX(1);
+		}
+
+		&:hover {
+			color: $dark-blue;
+		}
+	}
 }

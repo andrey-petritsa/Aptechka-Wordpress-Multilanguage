@@ -1,5 +1,5 @@
 /**
- * Swiper 6.5.0
+ * Swiper 6.5.3
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
@@ -7,9 +7,10 @@
  *
  * Released under the MIT License
  *
- * Released on: March 5, 2021
+ * Released on: March 31, 2021
  */
 
+export const __esModule = true;
 export { default as Swiper, default } from './esm/components/core/core-class';
 export { default as Virtual } from './esm/components/virtual/virtual';
 export { default as Keyboard } from './esm/components/keyboard/keyboard';

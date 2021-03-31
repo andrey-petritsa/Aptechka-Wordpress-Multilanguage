@@ -1,33 +1,34 @@
 .mama {
-    color: $dark-blue;
-    padding: 0px 20px 0 20px;
-    @media(max-width: 1200px){
-        padding: 100px 20px 0 20px;
-    }
+	color: $dark-blue;
+	padding: 0 20px 0 20px;
 
-    &__heading {
-    }
+	@media (max-width: 1200px) {
+		padding: 100px 20px 0 20px;
+	}
 
-    &__text {
-        
-    }
+	&__heading {
+	}
 
-    &__chatbot {
-        
-    }
+	&__text {
 
-    &__links {
-        display: flex;
-        justify-content: space-between;
-        @media(max-width: 1200px){
-            flex-direction: column;
-            align-items: center;
-        }
-    }
+	}
 
-    &__link-card {
+	&__chatbot {
 
-    }
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__link-card {
+
+	}
 }
-
 

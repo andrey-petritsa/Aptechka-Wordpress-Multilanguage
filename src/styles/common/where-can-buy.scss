@@ -1,134 +1,145 @@
 .where-can-buy {
-    color: $dark-blue;
-    padding: 150px 20px 0px 20px;
+	color: $dark-blue;
+	padding: 150px 20px 0 20px;
 
 
-    &__header {
-    }
+	&__header {
+	}
 
-    &__product {
-        
-        transition: all 1s ease;
-        height: 0;
-        visibility: hidden;
-        opacity: 0;
-        
-        transform: translateY(100%);
-        &_active {
-            height: auto;
-            visibility: visible;
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-    }
+	&__product {
+		transition: all 1s ease;
+		height: 0;
+		visibility: hidden;
+		opacity: 0;
+		transform: translateY(100%);
 
-    &__logos {
-        margin: 0px 0px 30px 0px;
-    }
+		&_active {
+			height: auto;
+			visibility: visible;
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
 
-    &__heading {
-        text-align: center;
-        font-weight: 700;
-        
-        &_small {
-            font-size: 24px;
-            margin: 0px 0px 50px 0px;
-        }
-    }
+	&__logos {
+		margin: 0 0 30px 0;
+	}
 
-    &__menu {
-    }
+	&__heading {
+		text-align: center;
+		font-weight: 700;
 
-    &__body {
-        margin: 60px 0px 0px 0px;
-        overflow: hidden;
-    }
+		&_small {
+			font-size: 24px;
+			margin: 0 0 50px 0;
+		}
+	}
 
-    &__ask {
-    }
+	&__menu {
+	}
 
-    &__logos-wrapper {
-        display: flex;
-        flex-wrap: wrap;
+	&__body {
+		margin: 60px 0 0 0;
+		overflow: hidden;
+	}
 
-        &_underlined {
-        }
-    }
+	&__ask {
+	}
 
-    &__order {
-    }
+	&__logos-wrapper {
+		display: flex;
+		flex-wrap: wrap;
 
-    &__bottom-text {
-        font-size: 22px;
-        font-weight: 700;
-        text-align: center;
-    }
+		&_underlined {
+		}
+	}
+
+	&__order {
+	}
+
+	&__bottom-text {
+		font-size: 22px;
+		font-weight: 700;
+		text-align: center;
+	}
 }
+
 .where-can-buy-menu {
-    display: flex;
-    padding: 0;
-    margin: 50px 0px 0px 0px;
-    list-style-type: none;
-    border-radius: 30px;
-    overflow: hidden;
-    @media(max-width: 1200px){
-        flex-direction: column;
-        .where-can-buy-menu__link {
-            margin: 0px 0px 0px 0px;
-        }
-    }
+	display: flex;
+	padding: 0;
+	margin: 50px 0 0 0;
+	list-style-type: none;
+	border-radius: 30px;
+	overflow: hidden;
 
-    &__link {
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        &_clicked {
-            cursor: default;
-            background-color: $windi-color;
-            a {
-                font-weight: 700;
-            }
-        }
-        &:hover {
-            
-        }
-        flex: 0 1 calc(100% / 3);
-        text-align: center;
-        padding: 20px 20px;
-        background-color: #f7f7f7;
-        font-weight: 400;
-        a {
-            color: $dark-blue;
-            font-size: 14px;
-        }
-        
-    }
+	@media (max-width: 1200px) {
+		flex-direction: column;
+
+		.where-can-buy-menu__link {
+			margin: 0 0 0 0;
+		}
+	}
+
+	&__link {
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+
+		&_clicked {
+			cursor: default;
+			background-color: $windi-color;
+
+			a {
+				font-weight: 700;
+			}
+		}
+
+		&:hover {
+
+		}
+
+		flex: 0 1 calc(100% / 3);
+		text-align: center;
+		padding: 20px 20px;
+		background-color: #f7f7f7;
+		font-weight: 400;
+
+		a {
+			color: $dark-blue;
+			font-size: 14px;
+		}
+	}
 }
+
 .where-can-buy-ask {
 }
+
 .where-can-buy-logo {
-    text-align: center;
-    flex: 0 1 calc(100% / 6);
-    @media(max-width: 1200px) {
-        flex: 0 1 calc(100% / 3);
-    }
-    @media(max-width: 750px) {
-        flex: 0 1 calc(100% / 2);
-    }
-    img {
-        width: 160px;
-        height: 100px;
-        transition: opacity 0.3s ease;
-        &:hover {
-            opacity: 0.5;
-        }
-        @media(max-width: 420px) {
-            width: auto;
-            height: auto;
-        }
-        
-    }
-    
+	text-align: center;
+	flex: 0 1 calc(100% / 6);
+
+	@media (max-width: 1200px) {
+		flex: 0 1 calc(100% / 3);
+	}
+
+	@media (max-width: 750px) {
+		flex: 0 1 calc(100% / 2);
+	}
+
+	img {
+		width: 160px;
+		height: 100px;
+		transition: opacity 0.3s ease;
+
+		&:hover {
+			opacity: 0.5;
+		}
+
+		@media (max-width: 420px) {
+			width: auto;
+			height: auto;
+		}
+	}
 }
+
 .where-can-buy-order {
 }

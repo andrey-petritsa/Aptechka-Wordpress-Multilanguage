@@ -4,10 +4,16 @@ import Swiper from 'swiper/core';
 import { Subject, of } from 'rxjs';
 
 function isObject(o) {
-    return typeof o === 'object' && o !== null && o.constructor && o.constructor === Object;
+    return (typeof o === 'object' &&
+        o !== null &&
+        o.constructor &&
+        Object.prototype.toString.call(o).slice(8, -1) === 'Object');
 }
 function extend(target, src) {
-    Object.keys(src).forEach((key) => {
+    const noExtend = ['__proto__', 'constructor', 'prototype'];
+    Object.keys(src)
+        .filter((key) => noExtend.indexOf(key) < 0)
+        .forEach((key) => {
         if (typeof target[key] === 'undefined') {
             target[key] = src[key];
             return;
@@ -16,7 +22,10 @@ function extend(target, src) {
             return;
         }
         if (isObject(src[key]) && isObject(target[key]) && Object.keys(src[key]).length > 0) {
-            extend(target[key], src[key]);
+            if (src[key].__swiper__)
+                target[key] = src[key];
+            else
+                extend(target[key], src[key]);
         }
         else {
             target[key] = src[key];
@@ -424,6 +433,12 @@ class SwiperComponent {
                 this.prependSlides = of(this.slides.slice(this.slides.length - this.loopedSlides));
                 this.appendSlides = of(this.slides.slice(0, this.loopedSlides));
             }
+            else if (this.swiperRef && this.swiperRef.virtual) {
+                this._ngZone.runOutsideAngular(() => {
+                    this.swiperRef.virtual.slides = this.slides;
+                    this.swiperRef.virtual.update(true);
+                });
+            }
             this._changeDetectorRef.detectChanges();
         };
         this.style = null;
@@ -459,7 +474,7 @@ class SwiperComponent {
         };
     }
     set navigation(val) {
-        var _a, _b, _c, _d;
+        var _a, _b, _c, _d, _e, _f;
         const currentNext = typeof this._navigation !== 'boolean' ? (_a = this._navigation) === null || _a === void 0 ? void 0 : _a.nextEl : null;
         const currentPrev = typeof this._navigation !== 'boolean' ? (_b = this._navigation) === null || _b === void 0 ? void 0 : _b.prevEl : null;
         this._navigation = setProperty(val, {
@@ -467,7 +482,10 @@ class SwiperComponent {
             prevEl: currentPrev || null,
         });
         if (typeof this._navigation !== 'boolean' &&
-            (typeof ((_c = this._navigation) === null || _c === void 0 ? void 0 : _c.nextEl) === 'string' || typeof ((_d = this._navigation) === null || _d === void 0 ? void 0 : _d.prevEl) === 'string')) {
+            (typeof ((_c = this._navigation) === null || _c === void 0 ? void 0 : _c.nextEl) === 'string' ||
+                typeof ((_d = this._navigation) === null || _d === void 0 ? void 0 : _d.prevEl) === 'string' ||
+                typeof ((_e = this._navigation) === null || _e === void 0 ? void 0 : _e.nextEl) === 'object' ||
+                typeof ((_f = this._navigation) === null || _f === void 0 ? void 0 : _f.prevEl) === 'object')) {
             this.showNavigation = false;
         }
     }
@@ -475,12 +493,13 @@ class SwiperComponent {
         return this._navigation;
     }
     set pagination(val) {
-        var _a, _b;
+        var _a, _b, _c;
         const current = typeof this._pagination !== 'boolean' ? (_a = this._pagination) === null || _a === void 0 ? void 0 : _a.el : null;
         this._pagination = setProperty(val, {
             el: current || null,
         });
-        if (typeof this._pagination !== 'boolean' && typeof ((_b = this._pagination) === null || _b === void 0 ? void 0 : _b.el) === 'string') {
+        if (typeof this._pagination !== 'boolean' &&
+            (typeof ((_b = this._pagination) === null || _b === void 0 ? void 0 : _b.el) === 'string' || typeof ((_c = this._pagination) === null || _c === void 0 ? void 0 : _c.el) === 'object')) {
             this.showPagination = false;
         }
     }
@@ -488,12 +507,13 @@ class SwiperComponent {
         return this._pagination;
     }
     set scrollbar(val) {
-        var _a, _b;
+        var _a, _b, _c;
         const current = typeof this._scrollbar !== 'boolean' ? (_a = this._scrollbar) === null || _a === void 0 ? void 0 : _a.el : null;
         this._scrollbar = setProperty(val, {
             el: current || null,
         });
-        if (typeof this._scrollbar !== 'boolean' && typeof ((_b = this._scrollbar) === null || _b === void 0 ? void 0 : _b.el) === 'string') {
+        if (typeof this._scrollbar !== 'boolean' &&
+            (typeof ((_b = this._scrollbar) === null || _b === void 0 ? void 0 : _b.el) === 'string' || typeof ((_c = this._scrollbar) === null || _c === void 0 ? void 0 : _c.el) === 'object')) {
             this.showScrollbar = false;
         }
     }

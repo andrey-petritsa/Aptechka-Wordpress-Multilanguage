@@ -1,28 +1,38 @@
 .about-button {
-    color: white;
-    letter-spacing: 1.2px;
-    background-color: $dark-blue;
-    display: inline-block;
-    font-size: 14px;
-    padding: 20px 60px;
-    border-radius: 100px;
-    border: none;
+	color: white;
+	letter-spacing: 1.2px;
+	background-color: $dark-blue;
+	display: inline-block;
+	font-size: 14px;
+	padding: 20px 60px;
+	border-radius: 100px;
+	border: none;
 
-    &:hover {
-        color: $dark-blue;
-        background-color: white;
-        transition: all 0.3s ease;
-    }
+	&:hover {
+		color: $dark-blue;
+		background-color: white;
+		transition: all 0.3s ease;
+	}
 
-    cursor: pointer;
+	cursor: pointer;
 
-    &_white {
-        background-color: white;
-        color: $dark-blue;
+	&_white {
+		background-color: white;
+		color: $dark-blue;
 
-        &:hover {
-            background-color: $dark-blue;
-            color: white;
-        }
-    }
+		&:hover {
+			background-color: $dark-blue;
+			color: white;
+		}
+	}
+
+	&_smoke {
+		background-color: #b9e2f7;
+		color: $dark-blue;
+
+		&:hover {
+			background-color: $dark-blue;
+			color: white;
+		}
+	}
 }
