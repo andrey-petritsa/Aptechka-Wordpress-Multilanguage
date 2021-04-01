@@ -1,0 +1,33 @@
+extends ../../common/sections/fade-out-tab
+
+
+
+block vars
+	- var column_count = 6
+	- var heading = "Где Купить"
+
+block menu-links
+	+menu_link("Dentinale Natura", "dentinale_natura")
+	+menu_link("Windi", "windi", true)
+	+menu_link("NoseFrida", "nosefrida")
+
+block sections
+	+section("dentinale_natura", "Dentinale® natura")
+	+section("windi", "Windi", true)
+	+section("nosefrida", "NoseFrida")
+	.fade-out-tab__bottom-text и других магазинах страны.
+
+block section
+	+items(`Спрашивайте ${heading} в аптеках и детских магазинах`)
+	+items(`Заказывайте ${heading} в интернет-магазинах`)
+
+block items
+	- for (var i = 0; i < 12; i++)
+		+item
+
+block item
+	a(href="#")
+		img(src="img/1-detnir.jpg", alt="")
+
+
+

@@ -2,11 +2,7 @@
 	color: $dark-blue;
 	padding: 150px 20px 0 20px;
 
-
-	&__header {
-	}
-
-	&__item {
+	&__section {
 		transition: all 1s ease;
 		height: 0;
 		visibility: hidden;
@@ -21,7 +17,7 @@
 		}
 	}
 
-	&__logos {
+	&__items {
 		margin: 0 0 30px 0;
 	}
 
@@ -46,15 +42,54 @@
 	&__ask {
 	}
 
-	&__logos-wrapper {
+	&__items-wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		margin: -30px -30px;
 
-		&_underlined {
+		.fade-out-tab-item {
+			padding: 30px;
+
+			img {
+				margin: 0 auto;
+				object-fit: cover;
+				transition: opacity 0.3s ease;
+				display: block;
+
+				&:hover {
+					opacity: 0.5;
+				}
+			}
 		}
-	}
 
-	&__order {
+		@media (max-width: 1260px) {
+			margin: 0;
+
+			.fade-out-tab-item {
+				flex: 0 1 calc(100% / 3);
+				padding: 20px;
+			}
+
+		}
+
+		@media (max-width: 750px) {
+			.fade-out-tab-item {
+				flex: 0 1 calc(100% / 2);
+				padding: 10px;
+			}
+		}
+
+		&_column-6 {
+			> * {
+				flex: 0 1 calc(100% / 6);
+			}
+		}
+
+		&_column-4 {
+			> * {
+				flex: 0 1 calc(100% / 4);
+			}
+		}
 	}
 
 	&__bottom-text {
@@ -81,65 +116,21 @@
 	}
 
 	&__link {
+		color: $dark-blue;
+		font-size: 14px;
+		font-weight: 400;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
 
 		&_clicked {
 			cursor: default;
 			background-color: $windi-color;
-
-			a {
-				font-weight: 700;
-			}
-		}
-
-		&:hover {
-
+			font-weight: 700;
 		}
 
 		flex: 0 1 calc(100% / 3);
 		text-align: center;
 		padding: 20px 20px;
 		background-color: #f7f7f7;
-		font-weight: 400;
-
-		a {
-			color: $dark-blue;
-			font-size: 14px;
-		}
 	}
-}
-
-.fade-out-tab-ask {
-}
-
-.fade-out-tab-logo {
-	text-align: center;
-	flex: 0 1 calc(100% / 6);
-
-	@media (max-width: 1200px) {
-		flex: 0 1 calc(100% / 3);
-	}
-
-	@media (max-width: 750px) {
-		flex: 0 1 calc(100% / 2);
-	}
-
-	img {
-		width: 160px;
-		height: 100px;
-		transition: opacity 0.3s ease;
-
-		&:hover {
-			opacity: 0.5;
-		}
-
-		@media (max-width: 420px) {
-			width: auto;
-			height: auto;
-		}
-	}
-}
-
-.fade-out-tab-order {
 }
