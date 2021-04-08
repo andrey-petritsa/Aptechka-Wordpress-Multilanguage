@@ -1,5 +1,6 @@
 .about-button {
 	color: white;
+	background-color: $dark-blue;
 	cursor: pointer;
 	letter-spacing: 1.2px;
 	display: inline-block;
@@ -14,8 +15,6 @@
 		background-color: white;
 	}
 
-	background-color: $dark-blue;
-
 	&_white {
 		background-color: white;
 		color: $dark-blue;
@@ -26,25 +25,25 @@
 		color: $dark-blue;
 	}
 
+	&_green {
+		color: $dark-blue;
+		background-color: $dentinale-color;
+	}
+
+	&_blue {
+		color: $dark-blue;
+		background-color: $windi-color;
+	}
+
+	&_pink {
+		color: $dark-blue;
+		background-color: $nosefrida-color;
+	}
+
 	&_hover_blue {
 		&:hover {
 			background-color: $dark-blue;
 			color: white;
 		}
-	}
-
-	&_green {
-		background-color: $dentinale-color;
-		color: black;
-	}
-
-	&_blue {
-		background-color: $windi-color;
-		color: black;
-	}
-
-	&_pink {
-		background-color: $nosefrida-color;
-		color: black;
 	}
 }
