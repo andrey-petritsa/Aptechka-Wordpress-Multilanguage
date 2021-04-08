@@ -1,4 +1,43 @@
 .fullscreen-card {
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	min-height: 600px;
+	display: flex;
+
+	&__column {
+		flex: 0 1 50%;
+
+		&_centred_vertically {
+			display: flex;
+			align-items: center;
+		}
+
+		&_centred {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	}
+
+	&__map {
+		@media(max-width: 1690px) {
+			max-height: 400px;
+		}
+	}
+
+	&__symptoms {
+		padding: 20px 0;
+		margin-left: 50px;
+		flex: 1;
+
+		@media(max-width: 1690px) {
+			margin-left: 0;
+		}
+	}
+
+	&__contacts {
+		max-width: 600px;
+	}
+
 	&_blue {
 		background-color: $windi-color;
 	}
@@ -15,18 +54,15 @@
 		background-color: #f7f7f7;
 	}
 
-	min-height: 600px;
-	display: flex;
+	&_reversed {
+		flex-direction: row-reverse;
+	}
 
-	&__column {
-		flex: 0 1 50%;
+	&_margin {
+		margin: 100px 0;
+	}
 
-		&:nth-child(1) {
-			img {
-				object-fit: cover;
-				width: 100%;
-				height: 100%;
-			}
-		}
+	@media (max-width: 1690px) {
+		flex-direction: column;
 	}
 }

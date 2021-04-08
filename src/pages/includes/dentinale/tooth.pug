@@ -1,0 +1,43 @@
+include ../../bem-blocks/tooth
+
+-
+	var title = "Схема прорезывания зубов"
+	var description = "Порядок прорезывания зубов у детей, как правило, схож и протекает по единой схеме"
+
+	var images = [
+		{
+			src: "img/tooth.svg",
+			centredText: "6-12",
+			isActive: true
+		},
+		{
+			src: "img/tooth.svg",
+			centredText: "9-16",
+		},
+		{
+			src: "img/tooth.svg",
+			centredText: "13-19",
+		},
+		{
+			src: "img/tooth.svg",
+			centredText: "17-23",
+		}
+	]
+
+	var selects = [
+		{
+			date: "Дата селекта 1",
+			text: "Текст селекта",
+		},
+		{
+			date: "Дата селекта 2",
+			text: "Текст селекта",
+		},
+		{
+			date: "Дата селекта 3",
+			text: "Текст селекта",
+		},
+	]
+
+
++tooth(title, description, images, selects)

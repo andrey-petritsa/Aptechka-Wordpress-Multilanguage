@@ -1,0 +1,50 @@
+-
+	var leftColumnModificator = {
+		isTextAlignRight: true
+	}
+	var rightColumnModificator = {
+		isIconFirst: true
+	}
+
+mixin about-product-advantage(heading, iconSrc, text, modificator)
+	.about-product__advantage
+		.about-product__advantage-title(class=modificator.isTextAlignRight ? "about-product__advantage-title_align_right":"")
+			.about-product__advantage-heading!=heading
+			.about-product__advantage-text=text
+		.about-product__advantage-icon(class=modificator.isIconFirst ? "about-product__advantage-icon_first":"")
+			img(src=iconSrc, alt="#")
+
+
+mixin menuLink(href, text)
+	li.about-product__link
+		a.menu-link.menu-link_underline(href=href)=text
+
+mixin about-product(color, imageSrc, imageLink, menuLinks, leftAdvantages, rightaboutAdvatanges)
+	.about-product(class=`about-product_${color}`)
+			ul.about-product__menu
+				each menuLink in menuLinks
+					+menuLink(menuLink.href, menuLink.text)
+			.container.about-product__container
+				.about-product__header.heading О продукте
+				.about-product__body
+					.about-product__column.about-product__column_left
+						each leftAdvantage in leftAdvantages
+							+about-product-advantage(leftAdvantage.title, leftAdvantage.icon, leftAdvantage.text, leftColumnModificator)
+					.about-product__column.about-product__column_image
+						.about-product__image
+							a(href=imageLink).parallax-scene.about-product__parallax-scene
+								img(src=imageSrc, alt="#", data-depth="0.6")
+					.about-product__column.about-product__column_right
+						each rightAdvantage in rightAdvantages
+							+about-product-advantage(rightAdvantage.title, rightAdvantage.icon, rightAdvantage.text, rightColumnModificator)
+				.about-product__preview
+					.about-product__preview-image
+						a(href="#")
+							img(src="img/preview-dentinale-1.jpg", alt="#")
+					.about-product__preview-image
+						a(href="#")
+							img(src="img/preview-dentinale-2.jpg", alt="#")
+
+
+
+

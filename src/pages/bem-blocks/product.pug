@@ -1,0 +1,21 @@
+mixin image(link, imageSrc)
+	a(href=link).parallax-scene.product__parallax-scene
+		img.product__image(src=imageSrc alt="#" data-depth="0.6")
+
+mixin button(link, color)
+	form(action=link)
+		input.about-button.product__about-button.about-button_hover_blue(type="submit" value="Подробнее", class=`about-button_${color}`)
+
+
+
+mixin product(productColor, productLink, imageSrc, productTitle, productName, productDescription)
+	.product.product-wrapper__product(data-aos="fade-up" class=`product_${productColor}`)
+		.container
+			.product__body
+				+image(imageSrc, productLink)
+				.product-card.product__product-card(data-aos="flip-right")
+					.product-card__body.product__product-card-body
+						.product-card__heading=productTitle
+						.product-card__name=productName
+						.product-card__description=productDescription
+						+button(productLink, productColor)

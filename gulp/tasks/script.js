@@ -6,14 +6,14 @@ const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack
 const eslint = require('gulp-eslint')
 
 module.exports = function script() {
-  return gulp.src('src/js/main.js')
+  return gulp.src('src/js/index.js')
     .pipe(plumber())
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(webpack({
       mode: process.env.NODE_ENV,
       output: {
-        filename: '[name].min.js',
+        filename: 'index.min.js',
       },
       module: {
         rules: [

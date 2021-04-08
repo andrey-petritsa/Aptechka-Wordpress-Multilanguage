@@ -1,0 +1,16 @@
+mixin text(bold, text)
+	.about-brand__text
+		span=bold
+		| !{' '}
+		span=text
+
+mixin about-brand(title, imageSrc, texts)
+	.about-brand.about-brand_margin
+		.container.about-brand__container
+			.heading.about-brand__header=title
+			.about-brand__body
+				.about-brand__column-image
+					img(src=imageSrc, alt="")
+				.about-brand__column-content
+					each text in texts
+						+text(text.bold, text.content)

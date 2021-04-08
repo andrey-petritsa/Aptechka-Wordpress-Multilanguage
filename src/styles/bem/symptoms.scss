@@ -1,0 +1,68 @@
+.symptoms {
+	$gap: 20px;
+
+	$iconRadius: 64px;
+
+	&__title {
+		font-size: 48px;
+		font-weight: 700;
+		margin: 0 0 60px 0;
+
+		@media (max-width: 1690px) {
+			text-align: center;
+			margin: 0 0 20px 0;
+		}
+
+		@media (max-width: 650px) {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		font-size: 14px;
+		line-height: 22px;
+		margin: 0 0 0 30px;
+		font-weight: 700;
+	}
+
+	&__row {
+		display: inline-flex;
+		align-items: center;
+		margin: $gap;
+		align-content: flex-start;
+		max-width: 200px;
+	}
+
+	&__wrapper {
+		margin: 0 -$gap;
+		display: flex;
+		flex-flow: column wrap;
+		align-items: flex-start;
+		align-content: flex-start;
+
+		&_column_3 {
+			max-height: 420px;
+		}
+
+		&_column_2 {
+			max-height: 350px;
+		}
+
+		@media (max-width: 1200px) {
+			max-height: 420px;
+		}
+
+		@media (max-width: 730px) {
+			max-height: none;
+		}
+
+		@media (max-width: 1690px) {
+			align-content: center;
+		}
+	}
+
+	&__icon {
+		width: $iconRadius;
+		height: $iconRadius;
+	}
+}

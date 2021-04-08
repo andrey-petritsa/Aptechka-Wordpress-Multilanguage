@@ -1,0 +1,213 @@
+.about-product {
+	&__menu {
+		display: flex;
+		margin: 0 0 50px 0;
+		padding: 0;
+		height: 64px;
+		justify-content: center;
+		align-items: center;
+
+		@media (max-width: 1200px) {
+			display: none;
+		}
+	}
+
+	&__link {
+		list-style-type: none;
+		margin: 0 60px 0 0;
+		font-size: 14px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&__body {
+		display: flex;
+
+		@media (max-width: 1200px) {
+			flex-direction: column;
+			max-width: 600px;
+			margin: 0 auto;
+		}
+	}
+
+	&__column {
+		display: flex;
+
+		&_left {
+
+			@media (max-width: 1200px) {
+				.about-product__advantage {
+					flex-direction: row-reverse;
+				}
+			}
+		}
+
+		&_image {
+			flex: 1;
+			align-items: center;
+			justify-content: center;
+
+			@media (max-width: 1200px) {
+				order: -1;
+				margin: 0 0 50px 0;
+			}
+		}
+
+		&_left,
+		&_right {
+			flex-direction: column;
+			flex: 0 1 30%;
+		}
+	}
+
+
+	&__advantage {
+		margin: 0 0 50px 0;
+
+		&:last-child {
+			padding: 0;
+		}
+
+		display: flex;
+		justify-content: space-between;
+
+		@media (max-width: 1200px) {
+			align-items: center;
+		}
+	}
+
+	&__advantage-header {
+		display: flex;
+
+		&_reversed {
+			flex-direction: row-reverse;
+		}
+	}
+
+	&__advantage-heading {
+		font-weight: 700;
+		font-size: 24px;
+
+		@media (max-width: 650px) {
+			font-size: 18px;
+		}
+	}
+
+
+	&__advantage-icon {
+		width: 64px;
+		height: 64px;
+
+		@media (max-width: 650px) {
+			width: 48px;
+			height: 48px;
+		}
+
+		&_first {
+			order: -1;
+		}
+	}
+
+	&__advantage-text {
+		margin: 20px 0 0 0;
+	}
+
+	&__advantage-title {
+		flex: 0 1 75%;
+
+		&_align_left {
+			text-align: left;
+		}
+
+		&_align_right {
+			text-align: right;
+
+			@media (max-width: 1200px) {
+				text-align: left;
+			}
+		}
+	}
+
+	&__advantage-text-wrap {
+		margin: 15px 0 0 0;
+		max-width: 300px;
+	}
+
+	&__image {
+		display: flex;
+		align-items: center;
+		border-radius: 50%;
+		width: 420px;
+		height: 420px;
+
+		&_scale_big {
+			transform: scale(1.5);
+		}
+
+		img {
+			object-fit: contain;
+			transform: scale(1.2);
+		}
+
+		@media (max-width: 650px) {
+			width: 250px;
+			height: 250px;
+		}
+	}
+
+	&__preview {
+		display: flex;
+		justify-content: center;
+		margin-top: 70px;
+
+		@media (max-width: 650px) {
+			margin-top: 20px;
+		}
+	}
+
+	&__preview-image {
+		&:hover {
+			transform: scale(1.2);
+		}
+
+		transition: transform 0.3s ease;
+		margin-right: 30px;
+
+		&:last-child {
+			margin: 0;
+		}
+	}
+
+	&_green {
+		ul {
+			background-color: $dentinale-color;
+		}
+
+		.about-product__image {
+			background-color: $dentinale-color;
+		}
+	}
+
+	&_blue {
+		ul {
+			background-color: $windi-color;
+		}
+
+		.about-product__image {
+			background-color: $windi-color;
+		}
+	}
+
+	&_pink {
+		ul {
+			background-color: $nosefrida-color;
+		}
+
+		.about-product__image {
+			background-color: $nosefrida-color;
+		}
+	}
+}
+

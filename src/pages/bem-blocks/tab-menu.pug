@@ -1,0 +1,17 @@
+include ../bem-blocks/titile-row
+
+mixin link(dataAttr, text)
+	li.tab-menu__link(data-show=dataAttr)= text
+
+mixin tab-menu(title, links, hidden_blocks)
+	.container.tab-menu__container
+		nav
+			.tab-menu
+				.tab-menu__title.heading=title
+				.tab-menu__menu
+					each link in links
+						+link(link.dataAttr, link.text, link.isActive)
+				.tab-menu__hidden-blocks
+					each hidden_block in hidden_blocks
+						.tab-menu__hidden-block(data-show=hidden_block.dataShow)
+							+title-row(hidden_block.blocks)

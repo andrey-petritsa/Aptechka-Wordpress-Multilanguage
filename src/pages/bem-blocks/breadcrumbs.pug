@@ -1,0 +1,10 @@
+mixin link(href, text)
+	.breadcrumb__link
+		a(href=href).menu-link=text
+
+mixin breadcrubm(links)
+	.breadcrumb
+		.container
+			.breadcrumb__links
+				each link in links
+					+link(link.href, link.text)

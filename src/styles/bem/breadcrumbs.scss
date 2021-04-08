@@ -1,0 +1,16 @@
+.breadcrumb {
+	font-size: 16px;
+
+	&__links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__link {
+		&:not(:last-child)::after {
+			content: "•";
+			padding: 0 10px;
+			color: $dark-blue;
+		}
+	}
+}

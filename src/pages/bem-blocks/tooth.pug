@@ -1,0 +1,28 @@
+mixin tooth_select(date, text)
+	a.tooth__select(href="#")
+		.tooth__select-time= date
+		.tooth__select-tooth= text
+
+mixin tooth_image(imgSrc, date, isActive=false)
+	.tooth__column.tooth__image-column(class=isActive ? `tooth__image-column_active`:"")
+		img(src=imgSrc, alt="#")
+		.tooth__image-column-content
+			.tooth__text
+				span= date
+				span месяцев
+
+
+
+mixin tooth(title, description, images, selects)
+	.tooth.tooth_margin
+		.container.tooth__container
+			.tooth__header
+				.tooth__heading.heading=title
+				.tooth__description.description=description
+			.tooth__body
+				each image in images
+					+tooth_image(image.src, image.centredText, image.isActive)
+				.tooth__column.tooth__select-column
+					each select in selects
+						+tooth_select(select.date, select.text)
+

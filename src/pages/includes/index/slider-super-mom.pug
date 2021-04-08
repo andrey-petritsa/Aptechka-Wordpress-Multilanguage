@@ -1,0 +1,42 @@
+-
+	var slides = [
+		{
+			imageSrc: `img/vibor_mam_3.jpg`,
+			title: `Заголовок слайда 1`,
+			text: "Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно",
+			author: `Автор слайда 1`,
+		},
+		{
+			imageSrc: `img/vibor_mam_4.jpg`,
+			title: `Заголовок слайда 2`,
+			text: "Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно" +
+					"Все мамы знают, что малыши до года обычно не умеют самостоятельно высмаркиваться, а носик очищать нужно",
+			author: `Автор слайда 2`,
+		}
+	]
+
+
+.slider-super-mom.slider-super-mom_margin
+	.swiper-container.container.slider-super-mom__container
+		.slider-super-mom__header.heading Выбор супер-мам
+		.swiper-wrapper
+			each slide in slides
+				.swiper-slide
+					.slider-super-mom__body
+						.slider-super-mom__column-image
+							img.slider-super-mom__image(src=slide.imageSrc alt='#')
+						.slider-super-mom__column-content
+							.slider-super-mom__content
+								.slider-super-mom__title=slide.title
+								.slider-super-mom__text=slide.text
+								.slider-super-mom__author=slide.author
+	.slider-super-mom__button.slider-super-mom__button_prev.swiper-button="<"
+	.slider-super-mom__button.slider-super-mom__button_next.swiper-button=">"
+

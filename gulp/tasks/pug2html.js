@@ -7,12 +7,12 @@ const bemValidator = require('gulp-html-bem-validator')
 const config = require('../config')
 
 module.exports = function pug2html() {
-  return gulp.src('src/pages/*.pug')
+  return gulp.src('src/pages/html/*.pug')
     .pipe(plumber())
     .pipe(pugLinter({ reporter: 'default' }))
     .pipe(pug({ pretty: config.pug2html.beautifyHtml }))
     .pipe(htmlValidator())
-    .pipe(bemValidator())
+    // .pipe(bemValidator())
     .pipe(gulp.dest('build'))
 }
 

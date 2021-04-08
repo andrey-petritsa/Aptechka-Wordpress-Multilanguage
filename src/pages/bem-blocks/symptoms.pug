@@ -1,0 +1,10 @@
+mixin row(icon, text)
+	.symptoms__row
+		img.symptoms__icon(src=icon, alt="#")
+		.symptoms__text=text
+
+mixin symptoms(symptoms)
+	.symptoms__title=symptoms.title
+		.symptoms__wrapper.symptoms__wrapper_column_2
+			each row in symptoms.rows
+				+row(row.icon, row.text)

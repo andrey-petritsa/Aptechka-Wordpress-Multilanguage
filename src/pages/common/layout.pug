@@ -1,19 +1,21 @@
+-
+	var yandexApiKey= `71a74f9a-4188-48eb-a2e6-9a1823cfb4c7`
+
 doctype html
 html(lang="ru")
-    block head
-        head
-            meta(charset="utf-8")
-            title Title your site
-            meta(content="width=device-width, initial-scale=1" name="viewport")
-            meta(content="ie=edge" http-equiv="x-ua-compatible")
-            link(rel="stylesheet" href="css/style.min.css")
-            <link rel="preconnect" href="https://fonts.gstatic.com">
-    body
-        block header
-            include header
-        .page
-            block content
-        block footer
-            include footer
-        block scripts
-            script(src='js/main.min.js')
+	block head
+		head
+			meta(charset="utf-8")
+			title Title your site
+			meta(content="width=device-width, initial-scale=1" name="viewport")
+			meta(content="ie=edge" http-equiv="x-ua-compatible")
+			link(rel="stylesheet" href="css/style.min.css")
+			script(src=`https://api-maps.yandex.ru/2.1/?apikey=${yandexApiKey}&lang=ru_RU` type="text/javascript")
+	body
+		block header
+			include header
+			block content
+		block footer
+			include footer
+		block scripts
+			script(src='js/index.min.js')

@@ -24,6 +24,11 @@ body {
 	margin: 0;
 	font-weight: 400;
 	font-family: "Montserrat";
+	color: $dark-blue;
+}
+
+::-webkit-scrollbar {
+	width: 0 !important;
 }
 
 img {

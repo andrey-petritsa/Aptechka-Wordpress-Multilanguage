@@ -1,0 +1,22 @@
+mixin item(imageSrc, text)
+	.how-to-use__item
+		.how-to-use__icon
+			img(src=imageSrc, alt="#")
+		.how-to-use__instruction=text
+
+
+mixin how-to-use(title, description, items, button)
+	.how-to-use.how-to-use_margin
+		.container.how-to-use__container
+			.how-to-use__header
+				.how-to-use__heading.heading=title
+				.how-to-use__description.description=description
+			.how-to-use__body
+				each item in items
+					+item(item.imageSrc, item.text)
+			if button
+				form
+					input.how-to-use__button.about-button.about-button_white.about-button_hover_blue(type="submit", value=button.value)
+
+
+

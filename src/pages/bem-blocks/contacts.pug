@@ -1,0 +1,15 @@
+mixin contacts(contacts)
+	.contacts.fullscreen-card__contacts
+		.contacts__wrapper
+			.contacts__header
+				a(href="#").contacts__telephone.menu-link=contacts.telephone
+				.contacts__time=contacts.time
+			.contacts__body
+				.ontacts__text=contacts.text
+				.ontacts__adress=contacts.adress
+				a(href="#").contacts__email.menu-link=contacts.email
+			.contacts__footer
+				.contacts__social-icon-wrapper
+					each socialIcon in contacts.socialIcons
+						a.contacts__social-icon-link(href=socialIcon.href)
+							img.contacts__social-icon-image(src=socialIcon.imageSrc, alt="#")

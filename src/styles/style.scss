@@ -1,5 +1,12 @@
 @import "common/global";
 
+@import "common/header";
+
+@import "common/footer";
+
+@import "common/page";
+////////////////////////////
+
 @import "bem/logo";
 
 @import "bem/about-button";
@@ -18,46 +25,51 @@
 
 @import "bem/fullscreen-card";
 
+@import "bem/symptoms";
+
 @import "bem/popup";
 
 @import "bem/chatbot";
 
 @import "bem/link-card";
 
-@import "bem/page";
+@import "bem/landing";
 
-@import "common/header";
+@import "bem/product-card";
 
-@import "common/footer";
+@import "bem/product";
 
-@import "common/landing";
+@import "bem/slider-super-mom";
 
-@import "common/products";
+@import "bem/fullscreen-form";
 
-@import "common/slider-super-mom";
+@import "bem/about-product";
 
-@import "common/fullscreen-form";
+@import "bem/how-to-use";
 
-@import "common/about-product";
+@import "bem/tooth";
 
-@import "common/how-to-use";
+@import "bem/about-brand";
 
-@import "common/tooth";
+@import "bem/products-group";
 
-@import "common/symptoms";
+@import "bem/instruction-popup";
 
-@import "common/about-brand";
+@import "bem/product-filter";
 
-@import "common/products-group";
+@import "bem/content-nav";
 
-@import "common/instruction-popup";
+@import "bem/breadcrumbs";
 
-@import "common/product-filter";
+@import "bem/fade-out-tab";
 
-@import "common/mama";
+@import "bem/contacts";
 
-@import "common/breadcrumbs";
+@import "bem/tab-menu";
 
-@import "common/fade-out-tab";
+@import "bem/title-row";
 
-@import "common/contacts";
+@import "bem/fullscreen-image";
+
+@import "bem/map";
+

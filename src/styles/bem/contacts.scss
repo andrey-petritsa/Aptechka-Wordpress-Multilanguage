@@ -1,0 +1,37 @@
+.contacts {
+	padding: 20px;
+
+	&__body {
+		margin: 40px 0;
+	}
+
+	&__telephone {
+		font-weight: 700;
+		font-size: 36px;
+		margin: 0 0 10px 0;
+		display: block;
+	}
+
+	&__time {
+		font-size: 14px;
+	}
+
+	&__text {
+		font-size: 18px;
+		line-height: 27.9px;
+	}
+
+	&__adress {
+		margin: 25px 0;
+	}
+
+	&__email {
+		text-decoration: underline;
+	}
+
+	@media(max-width: 650px) {
+		* {
+			font-size: 18px;
+		}
+	}
+}

@@ -1,0 +1,19 @@
+mixin product(link, imgSrc, productName, productText)
+	.products-group__product
+		.products-group__product-image
+			a(href=link)
+				img(src=imgSrc, alt="#")
+		.products-group__content
+			.products-group__name=productName
+			.products-group__text=productText
+
+mixin products-group(title, description, products)
+	.products-group.products-group_margin
+		.container.products-group__container
+			.products-group__header
+				.products-group__heading.heading=title
+				.products-group__description=description
+			.products-group__body
+				each product in products
+					+product(product.link, product.imgSrc, product.name, product.text)
+

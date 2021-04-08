@@ -1,0 +1,47 @@
+include ../../bem-blocks/tab-menu
+-
+	var links = [
+		{dataAttr: "dentinale", text: "Dentinale Natura"},
+		{dataAttr: "windi", text: "Windi"},
+		{dataAttr: "nosefrida", text: "NoseFrida"}
+	]
+
+	var partnerLogo = {
+		imageSrc: "img/1-detnir.jpg",
+		imageLink: "ozon.ru"
+	}
+
+	var partnerLogos = []
+	for (var i = 0; i < 12; i++)
+		partnerLogos.push(partnerLogo)
+
+	var hidden_blocks = [
+			{
+				dataShow: "dentinale",
+				mode: "titleRow",
+				blocks: [
+					{title: `Привет мир 1`, content: partnerLogos},
+					{title: `Привет мир 2`, content: partnerLogos},
+				]
+			},
+
+			{
+				dataShow: "windi",
+				mode: "titleRow",
+				blocks: [
+					{title: `Привет мир 3`, content: partnerLogos},
+					{title: `Привет мир 4`, content: partnerLogos},
+				]
+			},
+			{
+				dataShow: "nosefrida",
+				mode: "titleRow",
+				blocks: [
+					{title: `Привет мир 5`, content: partnerLogos},
+					{title: `Привет мир 6`, content: partnerLogos},
+				]
+			}
+	]
+
++tab-menu("Где купить?", links, hidden_blocks )
+

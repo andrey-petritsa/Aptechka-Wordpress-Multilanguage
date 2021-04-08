@@ -1,0 +1,29 @@
+mixin input(placeholder, type)
+	.fullscreen-form__item.fullscreen-form__item_border.fullscreen-form__item_big
+		input(type=type placeholder=placeholder)
+
+
+
+mixin button(button)
+	.fullscreen-form__item
+		input.about-button.about-button_hover_blue.fullscreen-form__button(type="submit" value=button.placeholder, class=`about-button_${button.color}`)
+
+mixin fullscreen-form(imageSrc ,isReversed, isNeedDate, isNeedQuestion, color, heading, text, button)
+	.fullscreen-form.fullscreen-form_margin(class=[`fullscreen-form_${color}`, isReversed ? "fullscreen-form_reverse-order" : ""] )
+		.fullscreen-form__column.fullscreen-form__column-content
+			form.fullscreen-form__body(action='#' method='POST')
+				.fullscreen-form__header
+					.fullscreen-form__heading= heading
+					.fullscreen-form__text= text
+				.fullscreen-form__wrapper
+					+input(`Ваше имя`, `text`)
+					if isNeedDate
+						+input(`День рождения малыша`, `text`)
+					+input(`E-mail`, `email`)
+					if isNeedQuestion
+						+input(`Ваш вопрос`, `text`)
+					+button(button)
+					.fullscreen-form__item
+						.fullscreen-form__agree-text Отправляя сообщение, вы даёте #[a.fullscreen-form__agree-link.menu-link(href="#") согласие] на обработку персональных данных.
+		.fullscreen-form__column.fullscreen-form__column-image
+			img.fullscreen-form__image(src=imageSrc alt='#')

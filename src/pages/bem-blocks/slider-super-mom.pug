@@ -1,0 +1,17 @@
+mixin slider-super-mom(slides, title)
+	.slider-super-mom.slider-super-mom_margin
+		.swiper-container.container.slider-super-mom__container
+			.slider-super-mom__header.heading=title
+			.swiper-wrapper
+				each slide in slides
+					.swiper-slide
+						.slider-super-mom__body
+							.slider-super-mom__column-image
+								img.slider-super-mom__image(src=slide.imageSrc alt='#')
+							.slider-super-mom__column-content
+								.slider-super-mom__content
+									.slider-super-mom__title=slide.title
+									.slider-super-mom__text=slide.text
+									.slider-super-mom__author=slide.author
+		.slider-super-mom__button.slider-super-mom__button_prev.swiper-button="<"
+		.slider-super-mom__button.slider-super-mom__button_next.swiper-button=">"

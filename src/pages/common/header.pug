@@ -1,35 +1,36 @@
+include ../bem-blocks/burger
 header.header
   .header__logo
     a(href='./')
       img.logo__image.logo(src="img/logo.svg" alt="#")
-  include burger
+  +burger
   .header__menu.menu
-    nav 
-      ul.menu__body 
-        li 
+    nav
+      ul.menu__body
+        li
           a.menu-link.menu__link(href="dentinale-natura.html") Dentinale natura
-        li 
-          a.menu-link.menu__link(href="windi.html") Windi 
-        li 
-          a.menu-link.menu__link(href="nosefrida.html") NoseFrida 
-        li 
-          a.menu-link.menu__link(href="mama.html") Мамам
-        li 
+        li
+          a.menu-link.menu__link(href="windi.html") Windi
+        li
+          a.menu-link.menu__link(href="nosefrida.html") NoseFrida
+        li
+          a.menu-link.menu__link(href="mamam.html") Мамам
+        li
           a.menu-link.menu__link(href="buy.html") Где купить?
-        li 
+        li
           a.menu-link.menu__link(href="contacts.html") Контакты
     .menu__action.action
-      a(href="#") 
+      a(href="#")
         .action__image-wrap
           img.action__image(src="img/globe.svg" alt="#")
       .action__language
-        ul.action__body 
-          li 
+        ul.action__body
+          li
             a.action__link.menu-link(href="#") AZ
-          li 
-            a.action__link.menu-link(href="#") BY 
-          li 
-            a.action__link.menu-link(href="#") KZ 
-          li 
+          li
+            a.action__link.menu-link(href="#") BY
+          li
+            a.action__link.menu-link(href="#") KZ
+          li
             a.action__link.menu-link(href="#") LV
-          li  
+          li

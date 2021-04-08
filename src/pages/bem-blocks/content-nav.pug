@@ -1,0 +1,23 @@
+mixin link-card(link)
+	.content-nav__link-card.link-card
+		a(href="#").link-card__image
+			img(src="img/baby.jpg", alt="")
+		.link-card__body
+			.link-card__heading=link.title
+			.link-card__text=link.text
+			form(action="#").link-card__button
+				input.about-button(type="submit" value="Подробнее")
+
+mixin content-nav(title, description, linkCards, chatbotText)
+	.content-nav(title, description, links, chatbotText)
+		.container.content-nav__container
+			.content-nav__heading.heading=title
+			.content-nav__text!=description
+			.content-nav__chatbot
+				.content-nav__chatbot-text.content-nav__chatbot-text_bold=chatbotText.bold
+				form(action="#").content-nav__chatbot-button
+					input.about-button(type="submit", value="Вступить")
+				.content-nav__chatbot-text=chatbotText.normal
+			.content-nav__links
+				each link in linkCards
+					+link-card(link)

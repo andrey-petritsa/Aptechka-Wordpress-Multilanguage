@@ -1,0 +1,16 @@
+mixin partner_logo(imageSrc, imageLink)
+	a.title-row__link(href=imageLink)
+		img.title-row__image(src=imageSrc, alt="#")
+
+
+mixin column(partnerLogos)
+	each partnerLogo in partnerLogos
+		.title-row__column
+			+partner_logo(partnerLogo.imageSrc, partnerLogo.imageLink)
+
+mixin title-row(blocks)
+	each block in blocks
+		.title-row.tab-menu__title-row
+			.title-row__title=block.title
+			.title-row__body
+				+column(block.content)

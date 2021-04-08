@@ -1,0 +1,18 @@
+mixin description(product_name, product_description)
+	h1.landing__item!= product_name
+	h2.landing__item!= product_description
+	form.landing__item(action="#")
+		input.about-button(type="submit" value="Смотреть видео")
+
+mixin landing-image(src)
+	img.landing__image(src=src, alt="")
+
+mixin landing(imageSrc, productName, productText)
+	.landing
+		+landing-image(imageSrc, productName, productText)
+		.container.landing__container
+			.landing__body
+				+description(productName, productText)
+
+
+

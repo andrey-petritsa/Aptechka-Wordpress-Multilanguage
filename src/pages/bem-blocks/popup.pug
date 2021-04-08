@@ -1,0 +1,16 @@
+mixin text(heading, text)
+	.instruction-popup__text
+		span.instruction-popup__heading=heading
+		| !{' '}
+		span.instruction-popup__text=text
+
+mixin popup(title, texts)
+	.instruction-popup.popup
+		.instruction-popup__container.container
+			.popup__action-close
+			.instruction-popup__body
+				.instruction-popup__body-heading=title
+				.instruction-popup__content
+					each text in texts
+						+text(text.title, text.content)
+

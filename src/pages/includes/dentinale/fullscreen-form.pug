@@ -1,0 +1,18 @@
+include ../../bem-blocks/fullscreen-form
+
+-
+	var formColor = "blue"
+	var heading = "Подпишитесь на рассылку"
+	var text = "Рассказываем о здоровье и развитии малышей"
+	var isHasDate = true
+	var isHasQuestion = false
+	var submitPlaceholder = "Подписаться"
+	var imageSrc = "img/form-subscribe-image.jpg"
+	var buttonColor = "white"
+	var isReversedOrder = false
+	var button = {
+		placeholder: "Подписаться",
+		color: "white"
+	}
+
++fullscreen-form(imageSrc, isReversedOrder, isHasDate, isHasQuestion, formColor, heading, text, button)
