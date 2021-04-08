@@ -16,6 +16,11 @@
 			align-items: center;
 			justify-content: center;
 		}
+
+		@media(max-width: 1690px) {
+			min-height: 400px;
+			flex: 0 1 auto;
+		}
 	}
 
 	&__map {
