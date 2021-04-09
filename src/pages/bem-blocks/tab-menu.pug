@@ -8,7 +8,7 @@ mixin tab-menu(title, links, hidden_blocks)
 		nav
 			.tab-menu
 				.tab-menu__title.heading=title
-				.tab-menu__menu
+				ul.tab-menu__menu
 					each link in links
 						+link(link.dataAttr, link.text, link.isActive)
 				.tab-menu__hidden-blocks

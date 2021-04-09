@@ -40,7 +40,7 @@ function setDefaultMenuLink(defaultLink) {
 
 export default function initTabMenu() {
     const tabMenu = document.querySelectorAll(`.tab-menu`)
-    if (tabMenu) {
+    if (tabMenu.length) {
         const links = document.querySelectorAll(`.tab-menu__link`)
         setDefaultMenuLink(links[0])
         links.forEach((link) => link.addEventListener(`click`, onLinkClick))
